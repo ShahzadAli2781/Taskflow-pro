@@ -1,140 +1,123 @@
-# TaskFlow Pro — Smart To-Do Management System
-### A Professional-Grade Desktop Application
+🚀 TaskFlow Pro
 
----
+TaskFlow Pro is a modern desktop task management application built using Python, CustomTkinter, SQLite, and Matplotlib.
+It helps users manage daily tasks, improve productivity, track progress visually, and organize workflows through a clean and interactive desktop interface.This project was created as a practical learning experience to improve Python development, GUI design, database management, software architecture, and problem-solving skills.
 
-## 🚀 Quick Start
+✨ Features
 
-### 1. Install Python 3.10+
-Download from https://python.org/downloads
+🔐 Authentication System
 
-### 2. Install required packages
-```bash
-pip install customtkinter Pillow matplotlib
-```
-Or use the requirements file:
-```bash
-pip install -r requirements.txt
-```
+User Login & Signup
+Secure password handling
+Remember Me functionality
+Session management
 
-### 3. Run the application
-```bash
-cd taskflow_pro
-python main.py
-```
+📋 Task Management
 
----
+Create tasks
+Edit & delete tasks
+Task priorities
+Task status tracking
+Category-based organization
 
-## 📁 Project Structure
+📊 Analytics Dashboard
 
-```
-taskflow_pro/
+Productivity score tracking
+Pie chart visualizations
+Category analytics
+Completion statistics
+Real-time dashboard updates
+
+🌙 Modern UI/UX
+
+Dark & Light themes
+Sidebar navigation
+Responsive desktop layout
+Clean modern interface
+Interactive components
+
+⏰ Productivity Features
+
+Overdue task alerts
+Recent tasks section
+Smart productivity indicators
+Real-time clock
+
+💾 Database Integration
+
+SQLite database support
+Persistent data storage
+Multi-user support
+
+🛠 Technologies Used
+
+Python
+CustomTkinter
+SQLite
+Matplotlib
+Object-Oriented Programming (OOP)
+
+📂 Project Structure
+
+taskflow-pro/
 │
-├── main.py            ← Entry point (Splash → Auth → Dashboard)
-├── auth.py            ← Login & Signup screens
-├── dashboard.py       ← Main window + sidebar navigation
-├── task_manager.py    ← Task list, task cards, task form dialog
-├── analytics.py       ← Charts and productivity stats
-├── database.py        ← SQLite ORM (UserDB, TaskDB, CategoryDB)
-├── requirements.txt
+├── main.py
+├── auth.py
+├── dashboard.py
+├── analytics.py
+├── task_manager.py
+├── database.py
 │
 ├── ui/
-│   ├── theme.py       ← Design tokens (dark/light mode)
-│   └── widgets.py     ← Reusable components (cards, badges, dialogs)
+│   ├── theme.py
+│   └── widgets.py
 │
 ├── utils/
-│   └── helpers.py     ← Hashing, date utils, export (TXT/CSV/JSON)
+│   └── helpers.py
 │
-├── database/          ← Auto-created: taskflow.db + session.json
-└── exports/           ← Auto-created: exported task files
-```
+└── README.md
+ 
+ Installation & Setup
+ 
+1️. Clone Repository
+git clone https://github.com/YOUR_USERNAME/taskflow-pro.git
+cd taskflow-pro
+2️. Install Dependencies
+pip install customtkinter matplotlib
+3️. Run Application
+python main.py
 
----
+📚 What I Learned
+Through this project, I gained hands-on experience in:
 
-## ✨ Features
+🐍 Python GUI Development
+🗄️ Database Integration
+🔐 Authentication Systems
+🏗️ Software Architecture
+🔄 State Management
+📊 Data Visualization
+🧠 Object-Oriented Programming
+📦 Modular Programming
+🖥️ Real-world Desktop Application Development
 
-| Feature | Details |
-|---|---|
-| Authentication | Login, Signup, Remember Me, Auto-login |
-| Task Management | Add / Edit / Delete / Toggle complete |
-| Priority Levels | High 🔴 / Medium 🟡 / Low 🟢 |
-| Task Status | Pending / In Progress / Completed / Overdue |
-| Categories | Work 💼 / Study 📚 / Personal 🏠 / Shopping 🛍️ / Fitness 🏋️ |
-| Search & Filter | Real-time search + status + priority filters |
-| Analytics | Pie charts, bar charts, productivity score |
-| Export | TXT / CSV / JSON |
-| Themes | Dark mode 🌙 / Light mode ☀️ |
-| Overdue Alerts | Visual warning banner |
-| Keyboard Shortcuts | Ctrl+1/2/3/,/N |
-| Real-time Clock | Greeting + live clock on dashboard |
-| Splash Screen | Branded loading screen |
+🎯 Future Improvements
 
----
+Planned enhancements for future versions:
 
-## 🎮 Keyboard Shortcuts
+☁️ Cloud synchronization
+🤖 AI-powered productivity assistant
+🔔 Notifications & reminders
+🖱️ Drag & drop task management
+👥 Team collaboration features
+📱 Mobile application version
+📄 Export reports as PDF
 
-| Shortcut | Action |
-|---|---|
-| Ctrl + 1 | Overview |
-| Ctrl + 2 | Tasks |
-| Ctrl + 3 | Analytics |
-| Ctrl + , | Settings |
-| Ctrl + N | Go to Tasks (to add new) |
+👨‍💻 Author
 
----
+It's Ali
 
-## 🗃️ Database
+Passionate about Python, AI, and modern software development.
 
-SQLite database is auto-created at `database/taskflow.db` on first run.
+⭐ Support
 
-**Tables:**
-- `users` — accounts + theme preference
-- `categories` — default 5 categories (seeded automatically)
-- `tasks` — all task data with foreign keys
-
----
-
-## 📦 Dependencies
-
-| Package | Version | Purpose |
-|---|---|---|
-| customtkinter | ≥ 5.2.0 | Modern GUI framework |
-| Pillow | ≥ 10.0.0 | Image support |
-| matplotlib | ≥ 3.7.0 | Charts & analytics |
-
-> **Note:** matplotlib is optional. The app runs without it — analytics panel shows an install prompt instead of charts.
-
----
-
-## 🛠️ Troubleshooting
-
-**"ModuleNotFoundError: No module named 'customtkinter'"**
-```bash
-pip install customtkinter
-```
-
-**Charts not showing**
-```bash
-pip install matplotlib
-```
-
-**App looks blurry on Windows**
-Add this before running (or set in Windows display settings):
-```python
-import ctypes
-ctypes.windll.shcore.SetProcessDpiAwareness(1)
-```
-
----
-
-## 🏗️ Architecture
-
-- **OOP** — All screens are CTk classes; DB operations in static methods
-- **Separation of concerns** — DB, UI, Business Logic in separate files
-- **Theme system** — Single `ui/theme.py` controls all colors via tokens
-- **Modular** — Each panel (Overview, Tasks, Analytics, Settings) is independent
-- **Error handling** — Graceful fallbacks for missing dependencies
-
----
-
-*Built with Python 3 + CustomTkinter • Portfolio-ready • MIT License*
+If you like this project, consider giving it a ⭐ on GitHub.
