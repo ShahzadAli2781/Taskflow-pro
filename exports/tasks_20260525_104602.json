@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "user_id": 5,
+    "title": "Project01",
+    "description": "Learning Something new and enhance my skills.",
+    "category_id": null,
+    "priority": "Medium",
+    "status": "Completed",
+    "due_date": "25_05_2026",
+    "created_at": "2026-05-25 05:37:09",
+    "updated_at": "2026-05-25T10:45:27.448879",
+    "completed_at": "2026-05-25T10:45:27.448891",
+    "category_name": null,
+    "category_color": null,
+    "category_icon": null
+  }
+]
